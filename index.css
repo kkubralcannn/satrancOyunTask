@@ -1,0 +1,49 @@
+/* Sayfa genel stili */
+body {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Tahtayı ortala ve gölge ver */
+#tahta {
+    margin: auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid #444;
+    width: 90vmin;             /* responsive genişlik */
+    height: 90vmin;            /* aynı yükseklik -> kare */
+    max-width: 1000px;          /* maksimum genişlik */
+    max-height: 1000px;         /* maksimum yükseklik */
+    table-layout: fixed;       /* hücreleri eşit yap */
+}
+
+/* Satranç kareleri */
+td {
+    width: 12.5%;               /* 8x8 = %100 / 8 = %12.5 */
+    height: 12.5%;
+    font-size: clamp(20px, 5vmin, 40px);  /* responsive yazı */
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s ease;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Açık renk kare */
+.acik {
+    background-color: rgb(230, 228, 215);
+}
+
+/* Koyu renk kare */
+.koyu {
+    background-color: rgb(202, 179, 76);
+}
+
+/* Hover efekti: kareye fare gelince hafif parlasın */
+td:hover {
+    filter: brightness(1.1);
+}
